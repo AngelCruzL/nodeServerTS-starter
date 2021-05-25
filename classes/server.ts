@@ -7,6 +7,9 @@ export default class Server {
 
   constructor() {
     this.app = express();
+    this.app.use(express.urlencoded({ extended: true }));
+    this.app.use(express.json());
+
     this.port = SERVER_PORT;
   }
 
